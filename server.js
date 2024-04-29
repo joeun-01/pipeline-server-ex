@@ -32,7 +32,7 @@ app.get('/api/text', (req, res) => {
 
 app.post('/api/text', (req, res) => {
     const { text, username } = req.body;
-    const finalText = `${text} 무야호`;
+    const finalText = `${text} 낄낄`;
     connection.query('INSERT INTO texts SET ?', { text: finalText, username }, (error) => {
         if (error) throw error;
         res.sendStatus(201);
